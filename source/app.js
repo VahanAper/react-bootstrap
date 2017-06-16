@@ -21,6 +21,9 @@ export default class App extends React.Component {
               href="http://02geek.com"
               target="_blank"
             />
+            <Button
+              className="btn btn-default"
+            />
           </p>
         </div>
       </div>

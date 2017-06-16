@@ -2,12 +2,14 @@ import React from 'react';
 
 export default class Button extends React.Component {
   render() {
+    const Tag = this.props.href ? 'a' : 'button';
+
     return (
-      <a
+      <Tag
         {...this.props}
       >
         Discover
-      </a>
+      </Tag>
     );
   }
 }
