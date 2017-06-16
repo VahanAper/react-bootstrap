@@ -1,1 +1,2 @@
-console.log('from clinet.js2');
+let name = 'from client.js';
+console.log(name);
