@@ -17,12 +17,15 @@ export default class App extends React.Component {
           <p>with bootstrap and SASS</p>
           <p>
             <Button
-              className="btn-primary"
+              className="-primary"
               href="http://02geek.com"
               target="_blank"
             />
             <Button
-              className="btn-default"
+              className="-danger-outline -sm"
+            />
+            <Button
+              className="-primary-outline -lg -block"
             />
           </p>
         </div>
