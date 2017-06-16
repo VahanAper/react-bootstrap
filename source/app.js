@@ -17,12 +17,12 @@ export default class App extends React.Component {
           <p>with bootstrap and SASS</p>
           <p>
             <Button
-              className="btn btn-primary"
+              className="btn-primary"
               href="http://02geek.com"
               target="_blank"
             />
             <Button
-              className="btn btn-default"
+              className="btn-default"
             />
           </p>
         </div>
