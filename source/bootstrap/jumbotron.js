@@ -9,14 +9,19 @@ export default class Jumbotron extends React.Component {
     const containerFluid = props.containerFluid;
     delete props.containerFluid;
 
-    return (
-      <div
-        { ...props }
-        className={classify('jumbotron', this.props.className)}
-      >
+    const CSS_NAME = 'jumbotron';
+    props.className = classify(CSS_NAME, this.props.className);
+    const body = props.className.includes(CSS_NAME+'-fluid')
+      ?
         <Container fluid={containerFluid}>
           {this.props.children}
         </Container>
+      :
+        this.props.children;
+
+    return (
+      <div { ...props }>
+        {body}
       </div>
     );
   }
