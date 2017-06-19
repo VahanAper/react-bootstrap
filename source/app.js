@@ -7,31 +7,29 @@ export default class App extends React.Component {
   render() {
     return (
       <Jumbotron
-        className="-fluid text-xs-center"
+        className="-fuild text-xs-center"
         style={{
           backgroundImage: 'url(img/forest.jpg)',
           color: 'white'
         }}
       >
-        <div className="container">
-          <h1>Building React user interfces</h1>
-          <p>with bootstrap and SASS</p>
-          <p>
-            <Button
-              className="-primary"
-              href="http://02geek.com"
-              target="_blank"
-              disabled
-            />
-            <Button
-              className="-danger-outline -sm"
-              disabled
-            />
-            <Button
-              className="-primary-outline -lg -block"
-            />
-          </p>
-        </div>
+        <h1>Building React user interfces</h1>
+        <p>with bootstrap and SASS</p>
+        <p>
+          <Button
+            className="-primary"
+            href="http://02geek.com"
+            target="_blank"
+            disabled
+          />
+          <Button
+            className="-danger-outline -sm"
+            disabled
+          />
+          <Button
+            className="-primary-outline -lg -block"
+          />
+        </p>
       </Jumbotron>
     );
   }
