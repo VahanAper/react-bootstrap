@@ -1,12 +1,13 @@
 import React from 'react';
 
+import Jumbotron from './bootstrap/jumbotron';
 import Button from './bootstrap/button';
 
 export default class App extends React.Component {
   render() {
     return (
-      <div
-        className="jumbotron jumbotron-fluid text-xs-center"
+      <Jumbotron
+        className="-fluid text-xs-center"
         style={{
           backgroundImage: 'url(img/forest.jpg)',
           color: 'white'
@@ -31,7 +32,7 @@ export default class App extends React.Component {
             />
           </p>
         </div>
-      </div>
+      </Jumbotron>
     );
   }
 }
