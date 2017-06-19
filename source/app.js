@@ -2,16 +2,13 @@ import React from 'react';
 
 import Jumbotron from './bootstrap/jumbotron';
 import Button from './bootstrap/button';
+import './appsource.css';
 
 export default class App extends React.Component {
   render() {
     return (
       <Jumbotron
-        className="-fluid text-xs-center"
-        style={{
-          backgroundImage: 'url(img/forest.jpg)',
-          color: 'white'
-        }}
+        className="-fluid text-xs-center custom"
         containerFluid={true}
       >
         <h1>Building React user interfces</h1>
