@@ -20,9 +20,11 @@ export default class App extends React.Component {
               className="-primary"
               href="http://02geek.com"
               target="_blank"
+              disabled
             />
             <Button
               className="-danger-outline -sm"
+              disabled
             />
             <Button
               className="-primary-outline -lg -block"
