@@ -6,6 +6,16 @@ import Button from './bootstrap/button';
 import './appsource.scss';
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick(e) {
+    console.log();
+  }
+
   render() {
     return (
       <ReactCSSTransitionGroup
@@ -32,6 +42,7 @@ export default class App extends React.Component {
             />
             <Button
               className="-primary-outline -lg -block"
+              onClick={this.onClick}
             >
               DELETE as children
             </Button>
