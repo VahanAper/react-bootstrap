@@ -9,11 +9,15 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      click: 0
+    };
+
     this.onClick = this.onClick.bind(this);
   }
 
   onClick(e) {
-    console.log();
+    this.setState({ click: ++this.state.click });
   }
 
   render() {
@@ -44,7 +48,7 @@ export default class App extends React.Component {
               className="-primary-outline -lg -block"
               onClick={this.onClick}
             >
-              DELETE as children
+              {this.state.click}
             </Button>
           </p>
         </Jumbotron>
