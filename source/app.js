@@ -10,22 +10,40 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      click: 0
+      click: 0,
+      labels: [],
     };
 
     this.onClick = this.onClick.bind(this);
   }
 
   onClick(e) {
-    this.setState({ click: ++this.state.click });
+    let labels = this.state.labels.concat([this.state.click]);
+    this.setState({
+      labels,
+      click: ++this.state.click
+    });
   }
 
   render() {
+    let buttons = this.state.labels.map((value, index) => {
+      console.log('value', value);
+      return (
+        <Button
+          className="-primary"
+          key={value}>
+          {value}
+        </Button>
+      );
+    });
+
     return (
       <ReactCSSTransitionGroup
         transitionName="app"
         transitionAppear={true}
-        transitionAppearTimout={500}
+        transitionAppearTimeout={500}
+        transitionEnterTimeout={500}
+        transitionLeaveTimeout={500}
       >
         <Jumbotron
           className="-fluid custom"
@@ -44,13 +62,20 @@ export default class App extends React.Component {
               className="-danger-outline -sm"
               label="EDIT"
             />
-            <Button
-              className="-primary-outline -lg -block"
-              onClick={this.onClick}
-            >
-              {this.state.click}
-            </Button>
           </p>
+          <Button
+            className="-primary-outline -lg -block"
+            onClick={this.onClick}
+            >
+            {this.state.click}
+          </Button>
+          <ReactCSSTransitionGroup
+            transitionName="app"
+            transitionEnterTimeout={5000}
+            transitionLeaveTimeout={500}
+          >
+            {buttons}
+          </ReactCSSTransitionGroup>
         </Jumbotron>
       </ReactCSSTransitionGroup>
     );

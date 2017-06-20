@@ -17,3 +17,10 @@ $text-color: yellow;
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
+.app-enter {
+  opacity: 0.01;
+}
+.app-enter-active {
+  opacity: 1;
+  transition: opacity 5s ease-in;
+}
