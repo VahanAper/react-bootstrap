@@ -14,7 +14,7 @@ export default class Button extends React.Component {
         {...this.props}
         className={className}
       >
-        Discover
+        {this.props.label || this.props.children}
       </Tag>
     );
   }

@@ -24,9 +24,17 @@ export default class App extends React.Component {
               className="-primary"
               href="http://02geek.com"
               target="_blank"
+              label="ADD"
             />
-            <Button className="-danger-outline -sm" />
-            <Button className="-primary-outline -lg -block" />
+            <Button
+              className="-danger-outline -sm"
+              label="EDIT"
+            />
+            <Button
+              className="-primary-outline -lg -block"
+            >
+              DELETE as children
+            </Button>
           </p>
         </Jumbotron>
       </ReactCSSTransitionGroup>
