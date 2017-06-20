@@ -15,6 +15,14 @@ export default class App extends React.Component {
     };
 
     this.onClick = this.onClick.bind(this);
+    this.onReset = this.onReset.bind(this);
+  }
+
+  onReset(e) {
+    this.setState({
+      click: 0,
+      labels: [],
+    });
   }
 
   onClick(e) {
@@ -60,7 +68,8 @@ export default class App extends React.Component {
             />
             <Button
               className="-danger-outline -sm"
-              label="EDIT"
+              label="Reset"
+              onClick={this.onReset}
             />
           </p>
           <Button
